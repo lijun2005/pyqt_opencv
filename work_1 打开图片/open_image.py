@@ -3,6 +3,18 @@ from PyQt5.QtWidgets import QApplication, QMainWindow, QLabel, QPushButton, QFil
 import cv2
 from PyQt5.QtGui import QImage, QPixmap
 from PyQt5.QtCore import Qt
+# QFileDialog() 是 PyQt5 中的一个类，用于创建文件对话框以便用户选择文件或文件夹。它提供了一个友好的用户界面，可以浏览文件系统并选择所需的文件或文件夹。
+# 使用 QFileDialog() 可以按以下步骤执行文件选择操作：
+#     创建 QFileDialog 对象：使用 QFileDialog() 创建一个文件对话框对象，例如 file_dialog = QFileDialog()。
+#     打开文件对话框：使用 getOpenFileName() 方法来打开文件对话框。该方法有一些参数，包括：
+#         parent：指定父级窗口（对话框所属的窗口）。
+#         caption：指定对话框的标题。
+#         directory：指定对话框打开时显示的默认目录。
+#         filter：指定文件过滤器，用于限制用户可选择的文件类型。
+#     例如，使用 image_path, _ = file_dialog.getOpenFileName(parent, caption, directory, filter) 来打开文件对话框，并将用户选择的文件路径保存在 image_path 变量中。
+#     处理用户选择的文件路径：根据需要，可以对用户选择的文件路径进行进一步处理。例如，可以使用该路径加载图像文件或执行其他操作。
+# QFileDialog 类还提供了其他方法，例如 getExistingDirectory() 用于选择文件夹路径，getSaveFileName() 用于选择保存文件的路径等。这些方法和参数可以根据具体需求进行使用。
+# 请注意，QFileDialog 是 PyQt5 中的一个类，但也与 Qt 库紧密相关。您可以参考 PyQt5 和 Qt 官方文档以获取更多详细的用法和示例。
 
 class MainWindow(QMainWindow):
     def __init__(self):
