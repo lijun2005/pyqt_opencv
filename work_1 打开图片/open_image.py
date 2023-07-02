@@ -41,6 +41,11 @@ class MainWindow(QMainWindow):
             q_image = QImage(rgb_image.data, w, h, bytes_per_line, QImage.Format_RGB888)
             pixmap = QPixmap.fromImage(q_image)
             self.label.setPixmap(pixmap.scaled(400, 400, Qt.AspectRatioMode.KeepAspectRatio))
+            
+            #pixmap = QPixmap.fromImage(q_image) 这行代码将 QImage 对象 q_image 转换为 QPixmap 对象 pixmap。
+            # 在 PyQt5 中，QPixmap 是用于在界面上显示图像的类，而 QImage 则是用于处理和表示图像数据的类。通过将 QImage 转换为 QPixmap，可以方便地在界面上显示图像。
+            # QPixmap.fromImage(q_image) 方法将 QImage 对象作为参数，返回一个相应的 QPixmap 对象。这个 QPixmap 对象包含了与 QImage 相同的图像数据，并可以用于在 PyQt5 应用程序的界面上显示图像。
+            # 一旦将 QImage 转换为 QPixmap，就可以通过调用 QLabel 的 setPixmap() 方法，将 QPixmap 设置为 QLabel 的显示内容，从而在界面上显示图像。
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
